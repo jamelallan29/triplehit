@@ -1,0 +1,291 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #07111f;
+    color: white;
+}
+
+header {
+    background: #0d1b2e;
+    padding: 25px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #263b55;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    color: #9fb0c5;
+    margin: 7px 0 0;
+}
+
+.header-buttons,
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 11px 16px;
+    border: none;
+    border-radius: 9px;
+    background: #1b3048;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.green {
+    background: #27d477;
+    color: #06140b;
+}
+
+main {
+    width: 92%;
+    max-width: 1400px;
+    margin: 30px auto;
+}
+
+.box {
+    background: #0d1b2e;
+    border: 1px solid #263b55;
+    border-radius: 16px;
+    padding: 22px;
+    margin-bottom: 25px;
+}
+
+.title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+h2 {
+    margin: 0;
+}
+
+.title-row p {
+    color: #9fb0c5;
+}
+
+#playerCounter {
+    background: #172c45;
+    padding: 9px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+#playerForm {
+    display: grid;
+    grid-template-columns: 1fr 180px 150px;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+input,
+select {
+    padding: 12px;
+    border-radius: 9px;
+    border: 1px solid #29445f;
+    background: #081525;
+    color: white;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #27d477;
+}
+
+#playersList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.player {
+    background: #101f33;
+    border: 1px solid #29445f;
+    padding: 12px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-name {
+    font-weight: bold;
+}
+
+.player-level {
+    color: #8fa5bd;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.remove {
+    background: #54202b;
+    color: #ff9da9;
+    padding: 7px 10px;
+}
+
+.status {
+    margin: 20px 0;
+    padding: 13px;
+    border-radius: 10px;
+    background: #10243a;
+    color: #bcd0e6;
+}
+
+.status.success {
+    background: #0c2d1c;
+    color: #8df0b8;
+}
+
+.status.error {
+    background: #35131b;
+    color: #ff9da9;
+}
+
+.status.warning {
+    background: #35280d;
+    color: #ffd66d;
+}
+
+.empty {
+    color: #71869d;
+    text-align: center;
+    padding: 25px;
+}
+
+/* DISTRIBUTIONS */
+
+.distribution {
+    border: 1px solid #263f5b;
+    border-radius: 14px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.distribution-title {
+    background: #13263e;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.distribution-title h3 {
+    margin: 0;
+}
+
+.groups {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.group {
+    background: #081625;
+    border: 1px solid #29445f;
+    border-radius: 12px;
+    padding: 13px;
+    min-height: 190px;
+}
+
+.group.invalid {
+    border-color: #ff5364;
+}
+
+.group-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.group-score {
+    color: #27d477;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.group-warning {
+    color: #ff8794;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.card {
+    background: #132a43;
+    border: 1px solid #31516f;
+    border-radius: 9px;
+    padding: 10px;
+    margin: 7px 0;
+    display: flex;
+    justify-content: space-between;
+    cursor: grab;
+}
+
+.card:hover {
+    border-color: #27d477;
+}
+
+.level {
+    background: #23415f;
+    border-radius: 6px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    #playerForm {
+        grid-template-columns: 1fr;
+    }
+
+    #playersList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .groups {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    #playersList {
+        grid-template-columns: 1fr;
+    }
+
+    .groups {
+        grid-template-columns: 1fr;
+    }
+}

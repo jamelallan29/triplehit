@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TRIPLE HIT ACADEMY</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h1>TRIPLE HIT ACADEMY</h1>
+            <p>Football Player Distribution System</p>
+        </div>
+
+        <div class="header-buttons">
+            <button id="demoBtn">Load Demo Players</button>
+            <button id="generateBtn" class="green">
+                Generate Distributions
+            </button>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- PLAYERS -->
+        <section class="box">
+
+            <div class="title-row">
+                <div>
+                    <h2>Players</h2>
+                    <p>Add 24 players and choose their level.</p>
+                </div>
+
+                <span id="playerCounter">0 / 24</span>
+            </div>
+
+
+            <form id="playerForm">
+
+                <input
+                    type="text"
+                    id="playerName"
+                    placeholder="Player name"
+                    required
+                >
+
+                <select id="playerLevel" required>
+
+                    <option value="">
+                        Select Level
+                    </option>
+
+                    <option value="1">
+                        Level 1
+                    </option>
+
+                    <option value="2">
+                        Level 2
+                    </option>
+
+                    <option value="3">
+                        Level 3
+                    </option>
+
+                    <option value="4">
+                        Level 4
+                    </option>
+
+                </select>
+
+                <button type="submit" class="green">
+                    Add Player
+                </button>
+
+            </form>
+
+
+            <div id="playersList">
+                <p class="empty">
+                    No players added yet.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- DISTRIBUTIONS -->
+
+        <section class="box">
+
+            <div class="title-row">
+
+                <div>
+                    <h2>Distributions</h2>
+
+                    <p>
+                        6 groups � 4 players
+                    </p>
+                </div>
+
+
+                <div class="buttons">
+
+                    <button id="undoBtn" disabled>
+                        Undo
+                    </button>
+
+                    <button id="clearBtn">
+                        Clear
+                    </button>
+
+                    <button id="printBtn">
+                        Print
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div id="status" class="status">
+
+                Add 24 players to start.
+
+            </div>
+
+
+            <div id="distributions">
+
+                <p class="empty">
+                    No distributions generated yet.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
